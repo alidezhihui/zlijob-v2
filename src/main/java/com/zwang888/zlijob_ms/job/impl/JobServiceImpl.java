@@ -1,8 +1,8 @@
 package com.zwang888.zlijob_ms.job.impl;
 
-import com.alidezhihui.zliJobApp.job.Job;
-import com.alidezhihui.zliJobApp.job.JobRepository;
-import com.alidezhihui.zliJobApp.job.JobService;
+import com.zwang888.zlijob_ms.job.Job;
+import com.zwang888.zlijob_ms.job.JobRepository;
+import com.zwang888.zlijob_ms.job.JobService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
