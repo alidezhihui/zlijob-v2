@@ -1,6 +1,5 @@
 package com.zwang888.zlijob_ms.job;
 
-import com.alidezhihui.zliJobApp.Company.Company;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
@@ -15,21 +14,10 @@ public class Job {
     private String minSalary;
     private String maxSalary;
     private String location;
-
-    @JsonBackReference
-    @ManyToOne()
-    private Company company;
+    private Long companyId;
 
     // entities are objects that represent the presistent data in the relational database
     public Job() {
-    }
-
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
     }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
@@ -39,6 +27,14 @@ public class Job {
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
+    }
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 
     public String getMaxSalary() {
